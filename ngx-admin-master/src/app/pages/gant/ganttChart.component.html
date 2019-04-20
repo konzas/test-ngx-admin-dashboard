@@ -1,0 +1,54 @@
+<!--<button (click)="getPlanButton($event)" class="myButton">Запустить построение плана</button>-->
+<button (click)="getPlanButton($event)" style="height: 50px;width: 300px; margin: 2% 1% 1% 1%"><b>Запустить построение плана</b></button>
+
+<div style="display: flex;">
+  <div style="margin-left: 1%;flex-grow: 2;">
+    <ng-gantt [data]="data" #editor></ng-gantt>
+  </div>
+
+  <div style="flex-basis: 35%; flex-grow: 1;">
+    <div class="childrenFlex">
+      <h5><b>LightPlan</b>	&nbsp;</h5>
+      <br/>  
+      <p style="text-indent: 30px;">Веб-ассистент по планированию на базе ИИ для творческих коллективов. Позволит сфокусироваться на управлении проекта, а не на его планировании.</p>
+
+      <p style="text-indent: 30px;">Концепт живой план, автоматизируется планирование и перепланирование. Сервис сам общается с разработчиками и менеджерами через чат-бота, реагирует на разные изменения и поддерживает в актуальности рабочий план.</p>
+    </div>
+
+    <div class="childrenFlex">
+      <h5><b>ПРИМЕЧАНИЕ</b>	&nbsp;</h5>
+      <br /><p>Перед Вами <b>демонстрационная версия </b> продукта <b>LightPlan.</b></p>
+      <p> Показана основная функция - <b>Автоматизированное планирование</b> (по кнопке) и <b>перепланирование</b> (по телеграмм боту) <b>.</b></p>
+      <p>Возможность <b>влияния на план через</b> телеграмм бота: <b><a href="https://t.me/CapAlpha2_bot">@CapAlpha2_bot</a></b> или <b><a href="https://t-do.ru/CapAlpha2_bot">зеркало</a>.</b></p>
+      <br />
+      <div>
+        <p>Ждем Ваши пожелания на почту <a href="mailto:dima.brunko@bk.ru">dima.brunko@bk.ru </a>.</p>
+      </div>
+    </div>
+
+    <div class="childrenFlex">
+      <h5><b>ПРЕДЛОЖЕНИЕ </b> </h5>
+      <br />
+      <p>1) Понравился концепт продукта?  <a href="mailto:dima.brunko@bk.ru"> Напишите нам! </a> И вы можете стать его альфа-тестером и получить скидку! </p>
+      <br />
+      <p>2) Концепт продукта вдохновил Вас, Вы верите в его успех и хотите участвовать в его создании? <a href="mailto:dima.brunko@bk.ru"> Напишите нам! </a> Вы можете стать его инвестором, или войти в команду разработчиков.</p>
+    </div>
+  </div>
+</div>
+
+<div style="margin-left: 1%;">
+  <div> <b>Качество </b> плана: <b>{{quality}} </b></div>
+  Построенный план <b>соотвествует требованиям?</b> :
+
+  <div *ngIf="isGoodPlan; then thenBlock; else elseBlock"></div>
+  <ng-template #thenBlock>&#9989;</ng-template>
+  <ng-template #elseBlock>&#9940;</ng-template>
+
+  <!--div style="width: 15%; display: inline-grid;">
+    <progress-bar [progress]="progress" [color]="'#488aff'">
+    </progress-bar>
+  </div>-->
+  <div> Поколение № {{generation}}</div>
+</div>
+
+<div [chart]="chart"></div>

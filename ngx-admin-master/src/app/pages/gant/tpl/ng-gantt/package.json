@@ -1,0 +1,71 @@
+{
+  "_args": [
+    [
+      "ng-gantt@1.8.9",
+      "C:\\Work\\VallySoft\\CAPPrototype\\src\\Clients\\Client.UserSite"
+    ]
+  ],
+  "_from": "ng-gantt@1.8.9",
+  "_id": "ng-gantt@1.8.9",
+  "_inBundle": false,
+  "_integrity": "sha512-p+xLx2nlXa63PnRrHlT0Qi/n70CHgdLZbc3D9/bhDliw9RtdwlfnpeDC4q2eZ6coYH8uWAVx/fiSJkvX6TEZCg==",
+  "_location": "/ng-gantt",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "ng-gantt@1.8.9",
+    "name": "ng-gantt",
+    "escapedName": "ng-gantt",
+    "rawSpec": "1.8.9",
+    "saveSpec": null,
+    "fetchSpec": "1.8.9"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng-gantt/-/ng-gantt-1.8.9.tgz",
+  "_spec": "1.8.9",
+  "_where": "C:\\Work\\VallySoft\\CAPPrototype\\src\\Clients\\Client.UserSite",
+  "author": {
+    "name": "Mario Mol",
+    "email": "mariohmol@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/mariohmol/ng-gantt/issues"
+  },
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "description": "Angular Gantt Editor (wrapper for [jsgantt-improved](https://github.com/mariohmol/jsgantt-improved)). View/Edit Gantt file with formatting.",
+  "es2015": "fesm2015/ng-gantt.js",
+  "esm2015": "esm2015/ng-gantt.js",
+  "esm5": "esm5/ng-gantt.js",
+  "fesm2015": "fesm2015/ng-gantt.js",
+  "fesm5": "fesm5/ng-gantt.js",
+  "homepage": "https://github.com/mariohmol/ng-gantt",
+  "keywords": [
+    "angular",
+    "jsgantt",
+    "ng-gantt",
+    "jsgantt-improved",
+    "gantt"
+  ],
+  "license": "MIT",
+  "main": "bundles/ng-gantt.umd.js",
+  "metadata": "ng-gantt.metadata.json",
+  "module": "fesm5/ng-gantt.js",
+  "name": "ng-gantt",
+  "peerDependencies": {
+    "@angular/core": ">=6.0.0-rc.5",
+    "@angular/common": ">=6.0.0-rc.5",
+    "jsgantt-improved": "^1.8.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariohmol/ng-gantt.git"
+  },
+  "sideEffects": false,
+  "typings": "ng-gantt.d.ts",
+  "version": "1.8.9"
+}

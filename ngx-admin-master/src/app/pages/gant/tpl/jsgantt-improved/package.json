@@ -1,0 +1,74 @@
+{
+  "_from": "jsgantt-improved@^1.8.7",
+  "_id": "jsgantt-improved@1.8.8",
+  "_inBundle": false,
+  "_integrity": "sha512-VkCcMRBPJBC6m9+Q21WtfzNT+rbuXL8hPXTH0ScsraOXuGqbtV+OsUdATtDmXi8LJOfL+TDIvEIqLVOVaFKBQQ==",
+  "_location": "/jsgantt-improved",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "jsgantt-improved@^1.8.7",
+    "name": "jsgantt-improved",
+    "escapedName": "jsgantt-improved",
+    "rawSpec": "^1.8.7",
+    "saveSpec": null,
+    "fetchSpec": "^1.8.7"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jsgantt-improved/-/jsgantt-improved-1.8.8.tgz",
+  "_shasum": "2ff1a7b179063e4b96f5f74e80abb30a7b9d8b9c",
+  "_spec": "jsgantt-improved@^1.8.7",
+  "_where": "/Users/aroslavanisimov/Develop/CAPPrototype/src/Clients/Client.UserSite",
+  "author": {
+    "name": "Eduardo Rodrigues, Ricardo Cardoso, Mario Mol",
+    "email": "mariohmol@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/mariohmol/jsgantt-improved/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "jsgantt-improved",
+  "devDependencies": {
+    "@types/chai": "^4.1.5",
+    "@types/jasmine": "^3.3.0",
+    "chai": "^4.1.2",
+    "express": "^4.16.4",
+    "jasmine": "^3.3.0",
+    "jasmine-core": "^3.3.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "mocha": "^5.2.0",
+    "protractor": "^5.4.1",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  },
+  "homepage": "https://github.com/mariohmol/jsgantt-improved#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "name": "jsgantt-improved",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariohmol/jsgantt-improved.git"
+  },
+  "scripts": {
+    "browserify": "browserify dist/index.js --standalone JSGantt > jsgantt.js",
+    "build": "tsc",
+    "demo": "nodemon server.js",
+    "demo-full": "npm run dist && npm run demo",
+    "dist": "npm run build && npm run browserify && cp src/jsgantt.css dist/ && cp jsgantt.js dist/ && cp jsgantt.js demo/ && cp src/jsgantt.css demo/ && echo 'DIST finished'",
+    "e2e-prepare": "npm i -g webdriver-manager && webdriver-manager update && ./node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update",
+    "publish-npm": "npm run dist && npm publish",
+    "start": "node server.js",
+    "test": "node node_modules/.bin/protractor protractor.conf.js",
+    "test-unit": "mocha -r ts-node/register test/**.ts",
+    "watch": "onchange 'src/**' '*.*' -- npm run build",
+    "watch:dist": "onchange 'src/**' '*.ts' -- npm run dist",
+    "watch:test": "onchange 'src/**/*.ts' '*.ts' -- npm run test"
+  },
+  "version": "1.8.8"
+}
